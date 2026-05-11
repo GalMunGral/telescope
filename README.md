@@ -1,10 +1,6 @@
 # Telescope
 
-A split proxy in C. Three components:
-
-- **`local`** — SOCKS5 server (libuv). Accepts connections from local apps or from `http`, relays them to `remote` via a custom protocol.
-- **`remote`** — Exit node (libuv). Resolves DNS and connects to the destination on behalf of `local`.
-- **`http`** — HTTP CONNECT/GET proxy (pthreads). Translates HTTP proxy requests into SOCKS5 and forwards them to `local`.
+Split proxy in C with libuv.
 
 ```
 [SOCKS5 app] --SOCKS5----------------+
